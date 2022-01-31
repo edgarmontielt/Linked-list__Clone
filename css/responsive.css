@@ -1,0 +1,33 @@
+@media (max-width: 840px) {
+  body {
+    --nodes-size: 50px;
+    position: relative;
+  }
+
+  .title_inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .title_inputs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    transform: scale(0.8);
+  }
+
+  .navbar {
+    font-size: large;
+  }
+
+  .container_list {
+    margin-left: 20px;
+    transform: scale(0.7);
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-U A-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="img/logoDev.png" />
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' />
+	<title>Listas Enlazadas</title>
+</head>
+
+<body id="background">
+	<section id="menu_lateral-settings">
+		<div class="title-menu_settings">
+			<div class="grid_extra">
+			</div>
+			<div class="settings">
+				<h2>Settings</h2>
+			</div>
+			<div class="close_menu">
+				<i class='bx bxs-x-circle bx-sm'></i>
+			</div>
+		</div>
+
+		<div class="line_gradient-config"></div>
+
+		<div class="container_settings">
+			<h4>Velocidad del Nodo:</h4>
+			<input type="number" placeholder="Milisegundos"><br>
+			<div class="message_error">
+				<p id="error"></p>
+			</div>
+			<h4>Velocidad del apuntador:</h4>
+			<input type="number" placeholder="Milisegundos"><br>
+			<input type="button" value="Guardar" id="button_save">
+		</div>
+	</section>
+
+	<header class="navbar_container">
+		<div class="navbar_grid">
+			<div id="icon_menu-lateral">
+				<i class='bx bx-menu bx-md' style='color:#ffffff' id="icon_menu"></i>
+			</div>
+			<div class="title_navbar">
+				<h2 class="navbar">Listas Enlazadas</h2>
+			</div>
+			<div id="navbar_theme">
+				<i class='bx bxs-moon bx-md' style='color:#ffffff' id="icon_theme"></i>
+			</div>
+		</div>
+		<div class="line_gradient"></div>
+	</header>
+
+	<main class="container_inputs">
+		<form action="">
+			<div class="container_labels"></div>
+		</form>
+
+		<div class="container_list">
+			<div class="class_list" id="node1">
+				<span class="element_node">1</span>
+			</div>
+			<div class="container_arrow_left">
+				<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383'></i>
+			</div>
+			<div class="class_list" id="node2">
+				<span>2</span>
+			</div>
+		</div>
+
+		<div class="title_inputs">
+			<div>
+				<h4>Modificar</h4>
+				<input type="number" placeholder="Indíce"><br>
+				<input type="number" placeholder="Valor"><br>
+				<input type="button" value="Ir" id="button_modif">
+			</div>
+			<div>
+				<h4>Agregar</h4>
+				<input type="number" placeholder="Valor" id="index_modif"><br>
+				<input type="button" value="Ir" id="button_agregar">
+			</div>
+			<div>
+				<h4>Eliminar</h4>
+				<input type="number" placeholder="Indíce"><br>
+				<input type="number" placeholder="Valor"><br>
+				<input type="button" value="Ir" id="button_delete">
+			</div>
+	</main>
+
+	<script src="js/config.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/linkendList.js"></script>
+</body>
+
+</html>
