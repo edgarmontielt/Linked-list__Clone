@@ -184,6 +184,29 @@ i:hover {
   }
 }
 
+/* Errors */
+
+#error_list {
+  color: red;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 2em;
+  animation: animationError 200ms;
+}
+
+@keyframes animationError{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Inputs */
 
 .container_inputs {

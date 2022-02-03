@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonModif = document.getElementById("button_modif");
 
     const parentList = document.querySelector(".container_list");
+    const principalContainer = document.querySelector('.principal_container')
 
     buttonAdd.addEventListener("click", () => {
 
@@ -16,10 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Delete nodes
     buttonDelete.addEventListener("click", () => {
         const deleteIndex = document.getElementById("delete--index").value;
-        animationDeleteNode(deleteIndex);
-        setTimeout(() => {
-            deleteNode(deleteIndex);
-        }, 2000);
+
+        if (deleteIndex === '' && principalContainer.childElementCount == 1) {
+            let newElement = document.createElement('div')
+            newElement.id = 'error_list'
+            newElement.innerHTML = 'Error, introduce un valor'
+            principalContainer.appendChild(newElement)
+        } else {
+            document.getElementById('error_list').remove()
+            animationDeleteNode(deleteIndex);
+            setTimeout(() => {
+                deleteNode(deleteIndex);
+            }, 2000);
+        }
     });
 
     // Proximo Sprint: add node in the list

@@ -6,7 +6,7 @@
 	<meta http-equiv="X-U A-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" href="img/logoDev.png" />
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/responsive.css" />
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' />
 	<title>Listas Enlazadas</title>
@@ -59,22 +59,25 @@
 			<div class="container_labels"></div>
 		</form>
 
-		<section class="container_list">
-			<div class="class_list" id="node1">
-				<span class="element_node">1</span>
-			</div>
-			<div class="container_arrow_left">
-				<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383' id="arrow_1"></i>
-			</div>
-			<div class="class_list" id="node2">
-				<span>2</span>
-			</div>
-			<div class="container_arrow_left">
-				<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383' id="arrow_3"></i>
-			</div>
-		</section>
 
-		<div class="title_inputs">
+		<div class="principal_container">
+			<section class="container_list">
+				<div class="class_list" id="node1">
+					<span class="element_node">1</span>
+				</div>
+				<div class="container_arrow_left">
+					<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383' id="arrow_1"></i>
+				</div>
+				<div class="class_list" id="node2">
+					<span>2</span>
+				</div>
+				<div class="container_arrow_left">
+					<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383' id="arrow_3"></i>
+				</div>
+			</section>
+		</div>
+
+		<section class="title_inputs">
 			<div>
 				<h4>Modificar</h4>
 				<input type="number" placeholder="Indíce"><br>
@@ -91,6 +94,7 @@
 				<input type="number" placeholder="Indíce" id="delete--index"><br>
 				<input type="button" value="Ir" id="button_delete">
 			</div>
+		</section>
 	</main>
 
 	<script src="js/config.js"></script>
