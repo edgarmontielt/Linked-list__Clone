@@ -147,6 +147,7 @@ i:hover {
 
 .container_arrow_left {
   justify-content: center;
+  /* animation: deletePointer 2s infinite; */
 }
 
 /* .class_list {
@@ -182,6 +183,7 @@ i:hover {
     transform: scale(0);
   }
 }
+
 /* Inputs */
 
 .container_inputs {

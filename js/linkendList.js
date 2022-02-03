@@ -1,37 +1,52 @@
 "use strict";
 
-let buttonAdd = document.getElementById("button_agregar");
-let indexModif = document.getElementById("index_modif");
-let buttonDelete = document.getElementById("button_delete");
-let elementList = document.querySelector(".container_arrow_left");
-let buttonModif = document.getElementById("button_modif");
-let buttonSave = document.getElementById("button_save");
+const buttonAdd = document.getElementById("button_agregar");
+const buttonDelete = document.getElementById("button_delete");
+const buttonModif = document.getElementById("button_modif");
+
+const parentList = document.querySelector(".container_list");
 
 buttonAdd.addEventListener("click", () => {
-  let node = document.querySelector("span");
-  let containerNode = document.querySelector(".class_list");
-  containerNode.style.display = "block";
-  containerNode.style.animation = `animateNode ${menuTimeOut / 1000}s ease`;
+
 });
 
+// Delete nodes
 buttonDelete.addEventListener("click", () => {
-  let node = document.querySelector("span");
-  let containerNode = document.querySelector(".class_list");
-  containerNode.style.display = "block";
-  containerNode.style.animation = `deletePointer ${menuTimeOut / 1000}s ease`;
-  containerNode.style.display = "absolute";
+    const deleteIndex = document.getElementById("delete--index").value;
+    animationDeleteNode(deleteIndex);
+    setTimeout(() => {
+        deleteNode(deleteIndex);
+    }, 2000);
 });
 
-let insertNode = () => {
-  let containerList = document.querySelector(".container_list");
-  let newNode =
-    '<div class="container_arrow_left"><i class="bx bxs-right-arrow-alt bx-md" style="color:#e4d9d9"></i></div><div class="class_list"><span>2</span></div>';
+// Proximo Sprint: add node in the list
+function createNode(arg) {
+    // Pendient Process
+}
 
-  containerList.insertAdjacentHTML("beforeend", newNode);
-};
+function animationAddNode(arg) {
 
-buttonModif.addEventListener("click", () => {});
+}
 
-buttonSave.addEventListener("click", () => {
-  error();
-});
+async function deleteNode(arg) {
+    let childs = parentList.getElementsByTagName("div");
+
+    if (arg % 2 === 0) {
+        childs[arg].remove();
+        childs[arg++].remove();
+    } else {
+        alert("EL nodo no coincide");
+    }
+}
+
+function animationDeleteNode(arg) {
+    let childs = parentList.getElementsByTagName("div");
+
+    if (arg % 2 === 0) {
+        childs[arg].style.animation = `deletePointer 2s`;
+        const arrow = document.getElementById(`arrow_${Number(arg) + 1}`);
+        arrow.style.animation = `deletePointer 2s`;
+    } else {
+        alert("EL nodo no coincide");
+    }
+}
