@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const principalContainer = document.querySelector('.principal_container')
 
     buttonAdd.addEventListener("click", () => {
+        const addNode = document.getElementById("button_agregar").value;
+
+        let newNode = document.createElement('')
+
+        
 
     });
 
@@ -18,13 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonDelete.addEventListener("click", () => {
         const deleteIndex = document.getElementById("delete--index").value;
 
-        if (deleteIndex === '' && principalContainer.childElementCount == 1) {
-            let newElement = document.createElement('div')
-            newElement.id = 'error_list'
-            newElement.innerHTML = 'Error, introduce un valor'
-            principalContainer.appendChild(newElement)
+        // if (deleteIndex == '') {
+        //     let newElement = document.createElement('div')
+        //     newElement.id = 'error_list'
+        //     newElement.innerHTML = '! Error, introduce un valor'
+        //     principalContainer.appendChild(newElement)
+        // } else {
+
+        if (deleteIndex === '') {
+            alert('Esta vacío')
         } else {
-            document.getElementById('error_list').remove()
             animationDeleteNode(deleteIndex);
             setTimeout(() => {
                 deleteNode(deleteIndex);
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Proximo Sprint: add node in the list
+    // TODO:  add node in the list
     function createNode(arg) {
         // Pendient Process
     }
@@ -44,21 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
     async function deleteNode(arg) {
         let childs = parentList.getElementsByTagName("div");
 
-        if (arg % 2 === 0) {
-            childs[arg].remove();
-            childs[arg++].remove();
-        } else {
-            alert("EL nodo no coincide");
-        }
+        childs[arg].remove();
+
     }
 
     function animationDeleteNode(arg) {
         let childs = parentList.getElementsByTagName("div");
 
         if (arg % 2 === 0) {
-            childs[arg].style.animation = `deletePointer 2s`;
+            childs[arg].style.animation = 'deletePointer 2s';
             const arrow = document.getElementById(`arrow_${Number(arg) + 1}`);
-            arrow.style.animation = `deletePointer 2s`;
+            arrow.style.animation = 'deletePointer 2s';
         } else {
             alert("EL nodo no coincide");
         }

@@ -121,6 +121,11 @@ i:hover {
 
 /* linkend-list-container */
 
+.node_arrow {
+  display: flex;
+  align-items: center;
+}
+
 /* Container elements */
 .container_list {
   height: 20em;
@@ -147,6 +152,7 @@ i:hover {
 
 .container_arrow_left {
   justify-content: center;
+  margin-left: 2em;
   /* animation: deletePointer 2s infinite; */
 }
 
