@@ -1,14 +1,9 @@
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-
-/* ---------- Global styles ------------*/
-
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
   color: aliceblue;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
 }
 
 /*------------ Lateral Menu  Settings -----------*/
@@ -137,28 +132,19 @@ i:hover {
 }
 
 .class_list {
-  width: 56px;
+  width: 50px;
   height: 50px;
-  padding-top: 5px;
   background-color: #0c9b43;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   position: relative;
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.container_arrow_left {
+  font-size: 26px;
+  font-weight: 600;
+  display: flex;
   justify-content: center;
-  margin-left: 2em;
-  /* animation: deletePointer 2s infinite; */
+  align-items: center;
 }
 
-/* .class_list {
-        animation: animateNode 1.2s;
-} */
 
 @keyframes animateNode {
   0% {
@@ -239,6 +225,7 @@ input[type="number"] {
   font-size: 16px;
   color: #434343;
   font-weight: 500;
+  outline: none;
 }
 
 input[type="button"] {
@@ -249,11 +236,12 @@ input[type="button"] {
   border: none;
   color: #c0c0c0;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 input[type="button"]:hover {
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 #button_save {
