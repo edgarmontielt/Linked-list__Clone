@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttonDelete = document.getElementById("button_delete");
   const buttonModif = document.getElementById("button_modif");
   const parentList = document.querySelector(".container_list");
+  const childs = parentList.getElementsByTagName("div");
 
   buttonAdd.addEventListener("click", () => {
     const addNodeInput = document.getElementById("index_add").value;
@@ -13,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Nel bro, no se puede");
     } else {
       createNode(addNodeInput);
-      setTimeout(() => {
-        animationAddNode(addNodeInput);
-      }, 1500);
     }
   });
 
@@ -34,28 +32,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function createNode(arg) {
-
     const newNode = `<i class='bx bxs-right-arrow-alt bx-md' style='color:#838383' id='arrow_1'></i>
-    <div class="class_list" id="node${arg}">
+    <div class="class_list" id="node${childs.length + 1}">
     <span class="element_node">${arg}</span>
       </div>
     `;
-    parentList.innerHTML += newNode
+    parentList.innerHTML += newNode;
+    animationAddNode(childs.length - 1);
   }
+
   async function deleteNode(arg) {
-    let childs = parentList.getElementsByTagName("div");
     let arrow = parentList.getElementsByTagName("i");
     childs[arg].remove();
-    arrow[arg].remove();
+    if (arg === "0") {
+      arrow[arg].remove();
+    } else {
+      arrow[arg - 1].remove();
+    }
   }
 
   function animationAddNode(arg) {
-    let childs = parentList.getElementsByTagName("div");
+    console.log(arg)
     childs[arg].style.animation = "animateNode 1.5s";
   }
 
   function animationDeleteNode(arg) {
-    let childs = parentList.getElementsByTagName("div");
     childs[arg].style.animation = "deletePointer 1.5s";
   }
 });

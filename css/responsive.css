@@ -1,9 +1,4 @@
 @media (max-width: 840px) {
-  body {
-    --nodes-size: 50px;
-    position: relative;
-  }
-
   .title_inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

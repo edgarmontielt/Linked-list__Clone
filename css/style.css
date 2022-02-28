@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@200&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
   color: aliceblue;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
-
 /*------------ Lateral Menu  Settings -----------*/
 
 #menu_lateral-settings {
@@ -32,9 +33,6 @@ body {
   margin: 22px 22px;
 }
 
-.close_menu i:hover {
-  transform: rotate(12deg);
-}
 /* -------------- Navegation Bar ------------ */
 
 .navbar_grid {
@@ -138,7 +136,7 @@ i:hover {
   border-radius: 50%;
   text-align: center;
   position: relative;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -173,29 +171,6 @@ i:hover {
   }
   100% {
     transform: scale(0);
-  }
-}
-
-/* Errors */
-
-#error_list {
-  color: red;
-  text-align: center;
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 2em;
-  animation: animationError 200ms;
-}
-
-@keyframes animationError{
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -252,4 +227,25 @@ input[type="button"]:hover {
 
 .message_error {
   color: red;
+}
+
+#error_list {
+  color: red;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 2em;
+  animation: animationError 200ms;
+}
+
+@keyframes animationError{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
