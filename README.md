@@ -1,3 +1,3 @@
-# Linkend List Animate
+# Linked List Animate
 
 A data structure animate
